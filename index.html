@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>教學工具集</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', 'PingFang TC', sans-serif;
+      background: #f1f5f9; min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    header {
+      width: 100%; background: linear-gradient(135deg, #3730a3, #4f46e5);
+      color: white; padding: 40px 24px; text-align: center;
+    }
+    header h1 { font-size: 2rem; font-weight: 800; }
+    header p { margin-top: 8px; opacity: .8; font-size: 1rem; }
+    .tools { max-width: 680px; width: 100%; padding: 32px 16px; display: grid; gap: 16px; }
+    .tool-card {
+      background: white; border-radius: 16px; padding: 24px 28px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.06);
+      display: flex; align-items: center; gap: 20px;
+      text-decoration: none; color: inherit; transition: transform .15s, box-shadow .15s;
+    }
+    .tool-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(79,70,229,.15); }
+    .tool-icon {
+      width: 56px; height: 56px; border-radius: 14px;
+      background: linear-gradient(135deg, #4f46e5, #818cf8);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; flex-shrink: 0;
+    }
+    .tool-info h2 { font-size: 1.1rem; font-weight: 700; color: #1e293b; }
+    .tool-info p { font-size: .88rem; color: #64748b; margin-top: 4px; line-height: 1.5; }
+    footer { color: #94a3b8; font-size: .8rem; padding: 24px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎓 教學工具集</h1>
+    <p>由 Claude + Firebase 驅動，開箱即用的課堂互動工具</p>
+  </header>
+  <div class="tools">
+    <a class="tool-card" href="classroom-scoring.html">
+      <div class="tool-icon">🏆</div>
+      <div class="tool-info">
+        <h2>課堂小組競賽加分系統</h2>
+        <p>設定課堂與小組 → 即時加分 → 排行榜即時更新 → 下載統計 CSV</p>
+      </div>
+    </a>
+    <!-- 未來工具可以加在這裡 -->
+  </div>
+  <footer>Powered by Firebase &amp; GitHub Pages</footer>
+</body>
+</html>

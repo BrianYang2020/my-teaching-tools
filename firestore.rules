@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 文字雲集合
+    match /wordcloud_words/{document} {
+      allow read, write: if true;
+    }
+
+    // 課堂小組競賽：課堂設定
+    match /classrooms/{document} {
+      allow read, write: if true;
+    }
+
+    // 課堂小組競賽：加分記錄
+    match /score_events/{document} {
+      allow read, write: if true;
+    }
+
+    // 其他集合預設禁止存取
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
